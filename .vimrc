@@ -32,11 +32,14 @@ Plugin 'handsomedylan1988/vim-flake8'
 Plugin 'handsomedylan1988/nerdtree'
 Plugin 'handsomedylan1988/perl-support.vim'
 Plugin 'handsomedylan1988/vim-visual-star-search'
+Plugin 'https://github.com/vim-scripts/google.vim.git'
 Plugin 'handsomedylan1988/YouCompleteMe'
 Plugin 'https://github.com/google/vim-codefmt.git'
 Plugin 'https://github.com/bazelbuild/vim-ft-bzl.git'
 Plugin 'google/vim-glaive'
 Plugin 'https://github.com/google/vim-maktaba.git'
+Plugin 'https://github.com/stegtmeyer/find-complete.git'
+Plugin 'https://github.com/elzr/vim-json.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -87,6 +90,7 @@ silent !mkdir ~/.vim/tmp/ > /dev/null 2>&1
 
 set backupdir=~/.vim/tmp/
 set directory=~/.vim/tmp/
+set path=~/workspace/code/speech/**
 
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier

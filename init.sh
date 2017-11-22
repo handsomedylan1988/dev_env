@@ -9,6 +9,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/google/vim-glaive.git ~/.vim/bundle/vim-glave
 sudo apt-get install clang-format-3.5
 sudo apt-get install gccgo-go
+sudo apt-get install js-beautify
 
 scp ~/dev-env/.bashrc ~/
 scp ~/dev-env/.vimrc ~/
