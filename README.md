@@ -11,12 +11,3 @@ echo "export PATH=\$PATH:\$GOPATH/bin # Add GOPATH/bin to PATH for scripting" >>
 source ~/.bashrc
 
 2. sh init.sh to install necessary dependancy
-
-3. vim  configuration
-vim
-:PluginInstall
-wait....................................
-
-4. compile auto-complete
-cd ~/.vim/bundle/YouCompleteMe/
-python ./install.py
