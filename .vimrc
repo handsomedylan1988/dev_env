@@ -28,18 +28,15 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'handsomedylan1988/vim-surround'
-Plugin 'handsomedylan1988/vim-flake8'
 Plugin 'handsomedylan1988/nerdtree'
-Plugin 'handsomedylan1988/perl-support.vim'
 Plugin 'handsomedylan1988/vim-visual-star-search'
 Plugin 'handsomedylan1988/google.vim'
 Plugin 'handsomedylan1988/YouCompleteMe'
-Plugin 'https://github.com/google/vim-codefmt.git'
-Plugin 'https://github.com/bazelbuild/vim-ft-bzl.git'
+Plugin 'google/vim-codefmt.git'
 Plugin 'google/vim-glaive'
-Plugin 'https://github.com/google/vim-maktaba.git'
-Plugin 'https://github.com/stegtmeyer/find-complete.git'
-Plugin 'https://github.com/elzr/vim-json.git'
+Plugin 'google/vim-maktaba.git'
+Plugin 'elzr/vim-json.git'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,8 +63,6 @@ filetype plugin indent on    " required
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-autocmd FileType python map <C-e> :call Flake8()<CR>
-
 set nu
 
 
@@ -90,7 +85,7 @@ silent !mkdir ~/.vim/tmp/ > /dev/null 2>&1
 
 set backupdir=~/.vim/tmp/
 set directory=~/.vim/tmp/
-set path=~/workspace/code/speech/**
+autocmd FileType bzl setlocal sw=2
 
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
@@ -103,3 +98,4 @@ augroup autoformat_settings
   autocmd FileType python AutoFormatBuffer yapf
   " Alternative: autocmd FileType python AutoFormatBuffer autopep8
 augroup END
+
